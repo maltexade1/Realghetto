@@ -115,6 +115,8 @@ async def next_page(bot, query):
             ]
             for file in files
         ]
+
+        btn.insert(0, [InlineKeyboardButton(text="🔞 CLICK HERE FOR OUR ADULT CHANNEL", url='https://t.me/Adultship_films')])
     try:
         if settings['auto_delete']:
             btn.insert(0, 
@@ -244,7 +246,7 @@ async def next_page(bot, query):
         InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')
     ])
     btn.insert(2, [
-        InlineKeyboardButton(🔞 CLICK FOR ADULT CHANNEL", url='https://t.me/Adultship_films')
+        InlineKeyboardButton("📤 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅 𝖥𝗂𝗅𝖾𝗌 📤", callback_data=f"send_all#{req}#{key}#{pre}")
     ])
     try:
         await query.edit_message_reply_markup(
@@ -1310,6 +1312,7 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
 
+        btn.insert(0, [InlineKeyboardButton(text="🔞 CLICK HERE FOR OUR ADULT CHANNEL", url='https://t.me/Adultship_films')])
     try:
         if settings['auto_delete']:
             btn.insert(0, 
@@ -1351,7 +1354,7 @@ async def auto_filter(client, msg, spoll=False):
         InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')
     ])
     btn.insert(2, [
-        InlineKeyboardButton(🔞 CLICK FOR ADULT CHANNEL", url='https://t.me/Adultship_films')
+        InlineKeyboardButton("📤 𝖲𝖾𝗇𝖽 𝖠𝗅𝗅 𝖥𝗂𝗅𝖾𝗌 📤", callback_data=f"send_all#{req}#{key}#{pre}")
     ])
     
     if offset != "":
