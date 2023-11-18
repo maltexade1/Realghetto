@@ -60,7 +60,7 @@ async def give_filter(client, message):
         if total_results == 0:
             return
         else:
-            return await message.reply_text(f"<b>👋 𝖧𝖾𝗒 {message.from_user.mention} \n📁 {str(total_results)} 𝖱𝖾𝗌𝗎𝗅𝗍𝗌 𝖺𝗋𝖾 𝖿𝗈𝗎𝗇𝖽 𝖿𝗈𝗋 𝗒𝗈𝗎𝗋 𝗊𝗎𝖾𝗋𝗒 {search}.\n\nKindly ask movies and series here ⬇\n@blaster_arena & @blaster_movies</b>")
+            return await message.reply_text(f"<code>{search}</code>")
 
 @Client.on_message(filters.private & filters.text & filters.incoming)
 async def pv_filter(client, message):
@@ -106,10 +106,10 @@ async def next_page(bot, query):
         btn = [
             [
                 InlineKeyboardButton(
-                    text=f"{file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"🔮{file.file_name}", callback_data=f'{pre}#{file.file_id}'
                 ),
                 InlineKeyboardButton(
-                    text=f"{get_size(file.file_size)}",
+                    text=f"🔖{get_size(file.file_size)}",
                     callback_data=f'{pre}#{file.file_id}',
                 ),
             ]
@@ -244,7 +244,7 @@ async def next_page(bot, query):
         InlineKeyboardButton(f'🎬 {search} 🎬', 'rkbtn')
     ])
     btn.insert(2, [
-        InlineKeyboardButton(🔞 CLICK HERE FOR OUR ADULT CHANNEL", url='https://t.me/Adultship_films')
+        InlineKeyboardButton(🔞 CLICK FOR ADULT CHANNEL", url='https://t.me/Adultship_films')
     ])
     try:
         await query.edit_message_reply_markup(
