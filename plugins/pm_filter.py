@@ -1278,7 +1278,7 @@ async def auto_filter(client, msg, spoll=False):
         search, files, offset, total_results = spoll
         settings = await get_settings(msg.message.chat.id)
         
-    key = f"<code>{search}</code>"
+    key = f"<code>{search}</code>, {message.chat.id}-{message.id}"
     temp.FILES_IDS[key] = files
     pre = 'filep' if settings['file_secure'] else 'file'
     req = message.from_user.id if message.from_user else 0
