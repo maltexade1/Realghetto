@@ -543,7 +543,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                         reply_markup=InlineKeyboardMarkup( [ [ InlineKeyboardButton('⚔️ HISLORDSHIP 𝖴𝖯𝖣𝖠𝖳𝖤𝖲 ⚔️', url="https://t.me/lordshipmovies") ] ] ))
                 else:
                     await query.answer(f"𝖧𝖾𝗒 {query.from_user.first_name}, 𝖳𝗁𝗂𝗌 𝗂𝗌 𝗇𝗈𝗍 𝗒𝗈𝗎𝗋 𝗋𝖾𝗊𝗎𝖾𝗌𝗍 !", show_alert=True)
-                await query.answer('𝖢𝗁𝖾𝖼𝗄 𝖯𝖬, 𝖨 𝗁𝖺𝗏𝖾 𝗌𝖾𝗇𝗍 𝖿𝗂𝗅𝖾𝗌 𝗂𝗇 𝖯𝖬', show_alert=True)
+                await query.answer('𝖢𝗁𝖾𝖼𝗄 𝖯𝖬, 𝖨 𝗁𝖺𝗏𝖾 𝗌𝖾𝗇𝗍 𝖿𝗂𝗅𝖾𝗌 𝗂𝗇 𝖯𝖬', show_alert=False)
         except UserIsBlocked:
             await query.answer('unblock the bot! (Go to your settings and check privacy settings and then check your blocked users and unblock the bot there!', show_alert=True)
         except PeerIdInvalid:
@@ -1278,7 +1278,7 @@ async def auto_filter(client, msg, spoll=False):
         search, files, offset, total_results = spoll
         settings = await get_settings(msg.message.chat.id)
         
-    key = f"<code>{search}</code>, {message.chat.id}-{message.id}"
+    key = f"{message.chat.id}-{message.id}"
     temp.FILES_IDS[key] = files
     pre = 'filep' if settings['file_secure'] else 'file'
     req = message.from_user.id if message.from_user else 0
