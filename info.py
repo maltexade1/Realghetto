@@ -31,9 +31,9 @@ BOT_START_TIME = time()
 # Bot images & videos
 PICS = (environ.get('PICS', 'https://telegra.ph/file/5553dc39f968b364d4856.jpg')).split() else None
 REQ_PICS = (environ.get('REQ_PICS', '')).split() else None
-NOR_IMG = environ.get("NOR_IMG", "https://telegra.ph/file/0593a3103ba1b9a5855bf.jpg") else None
-MELCOW_VID = environ.get("MELCOW_VID", "https://telegra.ph/file/0593a3103ba1b9a5855bf.jpg") else None
-SPELL_IMG = environ.get("SPELL_IMG", "https://telegra.ph/file/0593a3103ba1b9a5855bf.jpg") else None
+NOR_IMG = environ.get("NOR_IMG") else None
+MELCOW_VID = environ.get("MELCOW_VID") else None
+SPELL_IMG = environ.get("SPELL_IMG") else None
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
