@@ -29,11 +29,11 @@ USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 BOT_START_TIME = time()
 
 # Bot images & videos
-PICS = (environ.get('PICS', 'https://ibb.co/s9dTwbD')).split()
-REQ_PICS = (environ.get('REQ_PICS', 'https://ibb.co/s9dTwbD')).split()
-NOR_IMG = environ.get("NOR_IMG", 'https://ibb.co/s9dTwbD') 
-MELCOW_VID = environ.get("MELCOW_VID", 'https://ibb.co/s9dTwbD')
-SPELL_IMG = environ.get("SPELL_IMG", 'https://ibb.co/s9dTwbD')
+PICS = (environ.get('PICS', 'https://telegra.ph/Lordship-11-21')).split()
+REQ_PICS = (environ.get('REQ_PICS', 'https://telegra.ph/Lordship-11-21')).split()
+NOR_IMG = environ.get("NOR_IMG", 'https://telegra.ph/Lordship-11-21') 
+MELCOW_VID = environ.get("MELCOW_VID", 'https://telegra.ph/Lordship-11-21')
+SPELL_IMG = environ.get("SPELL_IMG", 'https://telegra.ph/Lordship-11-21')
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
@@ -45,7 +45,7 @@ auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID')
-SUPPORT_CHAT_ID = -1001924493521
+SUPPORT_CHAT_ID = -1001797789838
 reqst_channel = environ.get('REQST_CHANNEL_ID')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
